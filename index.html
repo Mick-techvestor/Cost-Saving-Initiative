@@ -6,7 +6,7 @@
 <title>Techvestor · Initiative Dashboard</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0d0f12;--bg2:#13161b;--bg3:#1a1e25;--bg4:#222730;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);--text:#f0f2f5;--text2:#8b92a0;--text3:#4a5160;--accent:#4f9cf9;--accent2:#3b82f6;--green:#34d399;--green-bg:rgba(52,211,153,0.1);--red:#f87171;--red-bg:rgba(248,113,113,0.1);--amber:#fbbf24;--amber-bg:rgba(251,191,36,0.1);--purple:#a78bfa;--teal:#2dd4bf;--coral:#fb923c;}
+:root{--bg:#0d0f12;--bg2:#13161b;--bg3:#1a1e25;--bg4:#222730;--border:rgba(255,255,255,0.07);--border2:rgba(255,255,255,0.13);--text:#f0f2f5;--text2:#8b92a0;--text3:#4a5160;--accent:#4f9cf9;--accent2:#3b82f6;--green:#34d399;--green-bg:rgba(52,211,153,0.12);--red:#f87171;--red-bg:rgba(248,113,113,0.12);--amber:#fbbf24;--amber-bg:rgba(251,191,36,0.12);--purple:#a78bfa;--teal:#2dd4bf;--coral:#fb923c;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:14px;min-height:100vh;}
 .topbar{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 28px;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
@@ -23,6 +23,8 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .crumb:hover{color:var(--accent);}
 .sep{color:var(--text3);}
 .crumb-active{color:var(--text2);}
+
+/* HOME */
 .home-top{margin-bottom:32px;}
 .home-top h2{font-size:26px;font-weight:600;color:var(--text);margin-bottom:5px;}
 .home-top p{font-size:14px;color:var(--text2);}
@@ -32,20 +34,34 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .sum-val{font-size:28px;font-weight:600;color:var(--text);line-height:1;font-family:'DM Mono',monospace;}
 .sum-sub{font-size:12px;color:var(--text2);margin-top:5px;}
 .section-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text3);margin-bottom:16px;}
-.groups-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:14px;}
+.groups-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;}
+
+/* GROUP CARD */
 .gcard{background:var(--bg2);border:1px solid var(--border);border-radius:15px;padding:22px 24px;cursor:pointer;transition:all 0.18s;position:relative;overflow:hidden;}
 .gcard:hover{border-color:var(--border2);transform:translateY(-2px);background:var(--bg3);}
 .gcard-bar{position:absolute;top:0;left:0;right:0;height:3px;border-radius:15px 15px 0 0;}
-.gcard-icon{font-size:30px;margin-bottom:13px;line-height:1;}
-.gcard-name{font-size:17px;font-weight:600;color:var(--text);margin-bottom:5px;}
-.gcard-inits{font-size:12px;color:var(--text3);margin-bottom:16px;line-height:1.5;}
-.gcard-footer{display:flex;justify-content:space-between;align-items:flex-end;}
-.gcard-spend{font-size:24px;font-weight:600;font-family:'DM Mono',monospace;}
-.gcard-props{font-size:11px;color:var(--text3);margin-top:4px;}
-.trend-pill{font-size:11px;font-weight:600;padding:3px 9px;border-radius:20px;display:inline-block;}
-.trend-up{background:var(--red-bg);color:var(--red);}
-.trend-down{background:var(--green-bg);color:var(--green);}
-.trend-flat{background:var(--bg4);color:var(--text2);}
+.gcard-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:12px;}
+.gcard-icon{font-size:26px;line-height:1;}
+.gcard-summary-pill{font-size:10px;font-weight:600;padding:3px 8px;border-radius:20px;}
+.pill-good{background:var(--green-bg);color:var(--green);}
+.pill-warn{background:var(--red-bg);color:var(--red);}
+.pill-mixed{background:var(--amber-bg);color:var(--amber);}
+.gcard-name{font-size:17px;font-weight:600;color:var(--text);margin-bottom:14px;}
+.gcard-spend{font-size:26px;font-weight:600;font-family:'DM Mono',monospace;color:var(--text);margin-bottom:4px;}
+.gcard-props{font-size:11px;color:var(--text3);margin-bottom:14px;}
+
+/* INITIATIVE BREAKDOWN ROWS */
+.init-breakdown{border-top:1px solid var(--border);padding-top:12px;display:flex;flex-direction:column;gap:7px;}
+.init-row{display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.init-row-name{font-size:12px;color:var(--text2);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+.init-row-right{display:flex;align-items:center;gap:8px;flex-shrink:0;}
+.init-row-spend{font-size:11px;font-family:'DM Mono',monospace;color:var(--text3);}
+.init-trend{font-size:10px;font-weight:600;padding:2px 6px;border-radius:10px;white-space:nowrap;}
+.init-trend.up{background:var(--red-bg);color:var(--red);}
+.init-trend.down{background:var(--green-bg);color:var(--green);}
+.init-trend.flat{background:var(--bg4);color:var(--text3);}
+
+/* GROUP VIEW */
 .view-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:14px;}
 .view-header-left h2{font-size:23px;font-weight:600;color:var(--text);}
 .view-header-left p{font-size:13px;color:var(--text2);margin-top:4px;}
@@ -57,6 +73,8 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .itab{background:transparent;border:1px solid var(--border);color:var(--text2);padding:7px 16px;border-radius:20px;font-size:13px;cursor:pointer;transition:all 0.15s;font-family:'DM Sans',sans-serif;}
 .itab:hover{border-color:var(--border2);color:var(--text);}
 .itab.active{background:var(--accent2);border-color:var(--accent2);color:#fff;font-weight:500;}
+
+/* METRICS */
 .metrics-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px;margin-bottom:20px;}
 .mcard{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:15px 17px;}
 .mcard-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--text3);margin-bottom:7px;}
@@ -64,6 +82,8 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .mcard-sub{font-size:11px;color:var(--text2);margin-top:5px;}
 .mcard-val.red{color:var(--red);}
 .mcard-val.grn{color:var(--green);}
+
+/* AI PANEL */
 .ai-panel{background:var(--bg2);border:1px solid var(--border2);border-radius:15px;padding:22px 24px;margin-bottom:20px;position:relative;overflow:hidden;}
 .ai-panel::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent2),var(--purple),var(--teal));}
 .ai-top{display:flex;align-items:center;gap:10px;}
@@ -92,6 +112,8 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .ai-loading{display:flex;align-items:center;gap:10px;color:var(--text2);font-size:13px;padding:4px 0;}
 .spinner{width:15px;height:15px;border:2px solid var(--border2);border-top-color:var(--accent);border-radius:50%;animation:spin 0.7s linear infinite;flex-shrink:0;}
 @keyframes spin{to{transform:rotate(360deg)}}
+
+/* TABLE */
 .tsection{background:var(--bg2);border:1px solid var(--border);border-radius:15px;overflow:hidden;}
 .thead-bar{padding:14px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
 .thead-title{font-size:13px;font-weight:500;color:var(--text2);}
@@ -137,7 +159,7 @@ td.mt{color:var(--text3);}
   <div class="topbar-right">
     <div class="data-pill">
       <div class="dot"></div>
-      <span id="stxt">911 properties · 16 initiatives</span>
+      <span>911 properties · 16 initiatives</span>
     </div>
   </div>
 </div>
@@ -165,14 +187,17 @@ const fmt=n=>{if(!n)return'-';const a=Math.abs(n);if(a>=1e6)return'$'+(a/1e6).to
 const fmtF=n=>{if(!n)return'-';return'$'+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:0});};
 const mlabel=ym=>{const[y,m]=ym.split('-');return new Date(+y,+m-1,1).toLocaleDateString('en-US',{month:'short',year:'2-digit'});};
 
-function getD(initName,market,year){
-  const d=DATA[initName];if(!d)return{months:[],properties:[],data:{},markets:[]};
-  let months=d.months;
-  if(year)months=months.filter(m=>m.startsWith(year));
-  const props=d.properties;
-  const data={};
-  for(const p of props)for(const m of months){const k=p+'|'+m;if(d.data[k])data[k]=d.data[k];}
-  return{months,properties:props,data,markets:d.markets||[]};
+// IMPROVED TREND: compare most recent month vs prior 3-month average
+function calcTrend(d) {
+  if(!d||!d.months||d.months.length < 2) return {pct:0, recentMonthTotal:0, priorAvg:0};
+  const mt={};
+  for(const m of d.months) mt[m]=d.properties.reduce((s,p)=>s+(d.data[p+'|'+m]||0),0);
+  const lastMonth = d.months[d.months.length-1];
+  const priorMonths = d.months.slice(-4,-1); // 3 months before last
+  const recentMonthTotal = mt[lastMonth]||0;
+  const priorAvg = priorMonths.length ? priorMonths.reduce((s,m)=>s+(mt[m]||0),0)/priorMonths.length : 0;
+  const pct = priorAvg ? ((recentMonthTotal - priorAvg) / priorAvg) * 100 : 0;
+  return {pct, recentMonthTotal, priorAvg, lastMonth};
 }
 
 function calcM(d){
@@ -181,7 +206,19 @@ function calcM(d){
   const rec=d.months.slice(-3),pri=d.months.slice(-6,-3);
   const recT=rec.reduce((s,m)=>s+(mt[m]||0),0),priT=pri.reduce((s,m)=>s+(mt[m]||0),0);
   const pct=priT?((recT-priT)/priT)*100:0;
-  return{grand,mt,avg:grand/(d.months.length||1),recT,priT,pct,rec};
+  // Also compute last-month vs prior-3-avg trend
+  const trend = calcTrend(d);
+  return{grand,mt,avg:grand/(d.months.length||1),recT,priT,pct,rec,trendPct:trend.pct,lastMonth:trend.lastMonth};
+}
+
+function getD(initName,market,year){
+  const d=DATA[initName];if(!d)return{months:[],properties:[],data:{},markets:[]};
+  let months=d.months;
+  if(year)months=months.filter(m=>m.startsWith(year));
+  const props=d.properties;
+  const data={};
+  for(const p of props)for(const m of months){const k=p+'|'+m;if(d.data[k])data[k]=d.data[k];}
+  return{months,properties:props,data,markets:d.markets||[]};
 }
 
 function sortedProps(properties,data,months){
@@ -212,7 +249,10 @@ function renderHome(){
   const uniqueInits=GROUPS.reduce((s,g)=>s+g.inits.filter(i=>DATA[i]).length,0);
 
   let h=`<div class="fadein">
-    <div class="home-top"><h2>Cost Initiative Dashboard</h2><p>Analyze and track spending across all property initiatives · ${new Date().toLocaleDateString('en-US',{month:'long',year:'numeric'})}</p></div>
+    <div class="home-top">
+      <h2>Cost Initiative Dashboard</h2>
+      <p>Analyze and track spending across all property initiatives · ${new Date().toLocaleDateString('en-US',{month:'long',year:'numeric'})}</p>
+    </div>
     <div class="summary-grid">
       <div class="sum-card"><div class="sum-label">Total Tracked Spend</div><div class="sum-val">${fmt(totalSpend)}</div><div class="sum-sub">All initiatives · all time</div></div>
       <div class="sum-card"><div class="sum-label">Properties</div><div class="sum-val">${allProps.size}</div><div class="sum-sub">Across all markets</div></div>
@@ -223,29 +263,57 @@ function renderHome(){
     <div class="groups-grid">`;
 
   for(const g of GROUPS){
-    let spend=0,props=new Set(),pSum=0,pCnt=0;
-    for(const i of g.inits){
-      const d=DATA[i];if(!d)continue;
-      for(const v of Object.values(d.data))spend+=v;
-      d.properties.forEach(p=>props.add(p));
-      const m=calcM({months:d.months,properties:d.properties,data:d.data});
-      if(m.priT){pSum+=m.pct;pCnt++;}
+    let groupSpend=0, groupProps=new Set();
+    const initRows = [];
+    let improving=0, attention=0;
+
+    for(const initName of g.inits){
+      const d=DATA[initName]; if(!d) continue;
+      let initSpend=0;
+      for(const v of Object.values(d.data)){groupSpend+=v;initSpend+=v;}
+      d.properties.forEach(p=>groupProps.add(p));
+
+      const trend = calcTrend(d);
+      const pct = trend.pct;
+      if(pct < -5) improving++;
+      else if(pct > 10) attention++;
+
+      initRows.push({name: initName.replace(/_/g,' '), spend: initSpend, pct, trend});
     }
-    const ap=pCnt?pSum/pCnt:0;
-    const tc=ap>5?'trend-up':ap<-5?'trend-down':'trend-flat';
-    const tl=ap>5?`↑ ${ap.toFixed(1)}%`:ap<-5?`↓ ${Math.abs(ap).toFixed(1)}%`:'→ Stable';
-    const sc=ap>5?'var(--red)':ap<-5?'var(--green)':'var(--text)';
+
+    // Summary pill
+    const total = initRows.length;
+    let pillClass, pillLabel;
+    if(attention === 0){ pillClass='pill-good'; pillLabel=`✓ All ${total} improving`; }
+    else if(attention === total){ pillClass='pill-warn'; pillLabel=`${attention} need attention`; }
+    else { pillClass='pill-mixed'; pillLabel=`${improving} improving · ${attention} flagged`; }
+
     h+=`<div class="gcard" onclick="renderGroup('${g.id}')">
       <div class="gcard-bar" style="background:${g.color}"></div>
-      <div class="gcard-icon">${g.icon}</div>
-      <div class="gcard-name">${g.name}</div>
-      <div class="gcard-inits">${g.inits.map(i=>i.replace(/_/g,' ')).join(' · ')}</div>
-      <div class="gcard-footer">
-        <div><div class="gcard-spend" style="color:${sc}">${fmt(spend)}</div><div class="gcard-props">${props.size} properties</div></div>
-        <div class="trend-pill ${tc}">${tl}</div>
+      <div class="gcard-top">
+        <div class="gcard-icon">${g.icon}</div>
+        <div class="gcard-summary-pill ${pillClass}">${pillLabel}</div>
       </div>
-    </div>`;
+      <div class="gcard-name">${g.name}</div>
+      <div class="gcard-spend">${fmt(groupSpend)}</div>
+      <div class="gcard-props">${groupProps.size} properties tracked</div>
+      <div class="init-breakdown">`;
+
+    for(const row of initRows){
+      const tc = row.pct < -5 ? 'down' : row.pct > 10 ? 'up' : 'flat';
+      const tl = row.pct < -5 ? `↓ ${Math.abs(row.pct).toFixed(1)}%` : row.pct > 10 ? `↑ ${row.pct.toFixed(1)}%` : '→ Stable';
+      h+=`<div class="init-row">
+        <span class="init-row-name">${row.name}</span>
+        <div class="init-row-right">
+          <span class="init-row-spend">${fmt(row.spend)}</span>
+          <span class="init-trend ${tc}">${tl}</span>
+        </div>
+      </div>`;
+    }
+
+    h+=`</div></div>`;
   }
+
   h+=`</div></div>`;
   $('main').innerHTML=h;
 }
@@ -268,6 +336,12 @@ function renderGroup(gid,initName,market,year){
   const mkts=[...new Set(d.markets)].sort();
   const orderedProps=sortedProps(fd.properties,fd.data,fd.months);
 
+  // Use improved trend for metric card
+  const trendPct = m.trendPct;
+  const trendLabel = `${trendPct>=0?'+':''}${trendPct.toFixed(1)}%`;
+  const trendClass = trendPct > 10 ? 'red' : trendPct < -5 ? 'grn' : '';
+  const trendSub = `vs prior 3-mo avg${m.lastMonth?' ('+mlabel(m.lastMonth)+')':''}`;
+
   let h=`<div class="fadein">
     <div class="breadcrumb"><button class="crumb" onclick="renderHome()">Dashboard</button><span class="sep">›</span><span class="crumb-active">${g.name}</span></div>
     <div class="view-header">
@@ -288,7 +362,7 @@ function renderGroup(gid,initName,market,year){
       <div class="mcard"><div class="mcard-label">Total Spend</div><div class="mcard-val">${fmt(m.grand)}</div><div class="mcard-sub">${fd.months.length} months</div></div>
       <div class="mcard"><div class="mcard-label">Properties</div><div class="mcard-val">${fd.properties.length}</div><div class="mcard-sub">tracked</div></div>
       <div class="mcard"><div class="mcard-label">Monthly Avg</div><div class="mcard-val">${fmt(m.avg)}</div><div class="mcard-sub">per month</div></div>
-      <div class="mcard"><div class="mcard-label">3-Month Trend</div><div class="mcard-val ${m.pct>5?'red':m.pct<-5?'grn':''}">${m.pct>=0?'+':''}${m.pct.toFixed(1)}%</div><div class="mcard-sub">vs prior 3 months</div></div>
+      <div class="mcard"><div class="mcard-label">Latest Month Trend</div><div class="mcard-val ${trendClass}">${trendLabel}</div><div class="mcard-sub">${trendSub}</div></div>
       <div class="mcard"><div class="mcard-label">Last Month</div><div class="mcard-val">${fmt(m.mt[fd.months[fd.months.length-1]]||0)}</div><div class="mcard-sub">${fd.months.length?mlabel(fd.months[fd.months.length-1]):'-'}</div></div>
     </div>
     <div class="ai-panel">
@@ -354,7 +428,7 @@ Summary:
 - Total spend: ${fmtF(m.grand)} over ${fd.months.length} months
 - Properties: ${fd.properties.length}${selMkt!=='all'?' in '+selMkt:' across all markets'}
 - Monthly avg: ${fmtF(m.avg)}
-- Recent 3-month avg: ${fmtF(m.recT/3)} vs prior: ${fmtF(m.priT/3)} (${m.pct>=0?'+':''}${m.pct.toFixed(1)}% change)
+- Latest month vs prior 3-month avg: ${m.trendPct>=0?'+':''}${m.trendPct.toFixed(1)}% (${m.lastMonth?mlabel(m.lastMonth):''})
 - Highest cost properties: ${sorted.slice(0,3).map(([p,v])=>p+' ('+fmtF(v)+')').join(', ')}
 - Lowest cost properties: ${sorted.slice(-3).map(([p,v])=>p+' ('+fmtF(v)+')').join(', ')}
 - Recent trend: ${trendStr}
