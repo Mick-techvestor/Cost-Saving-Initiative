@@ -23,45 +23,44 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .crumb:hover{color:var(--accent);}
 .sep{color:var(--text3);}
 .crumb-active{color:var(--text2);}
-
-/* HOME */
-.home-top{margin-bottom:32px;}
-.home-top h2{font-size:26px;font-weight:600;color:var(--text);margin-bottom:5px;}
+.home-top{margin-bottom:28px;}
+.home-top h2{font-size:26px;font-weight:600;color:var(--text);margin-bottom:4px;}
 .home-top p{font-size:14px;color:var(--text2);}
-.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:36px;}
+.summary-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:32px;}
 .sum-card{background:var(--bg2);border:1px solid var(--border);border-radius:13px;padding:18px 20px;}
 .sum-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--text3);margin-bottom:8px;}
 .sum-val{font-size:28px;font-weight:600;color:var(--text);line-height:1;font-family:'DM Mono',monospace;}
-.sum-sub{font-size:12px;color:var(--text2);margin-top:5px;}
-.section-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text3);margin-bottom:16px;}
+.sum-sub{font-size:11px;color:var(--text2);margin-top:5px;}
+.sum-sub2{font-size:10px;color:var(--text3);margin-top:3px;}
+.section-label{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text3);margin-bottom:14px;}
 .groups-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:14px;}
-
-/* GROUP CARD */
-.gcard{background:var(--bg2);border:1px solid var(--border);border-radius:15px;padding:22px 24px;cursor:pointer;transition:all 0.18s;position:relative;overflow:hidden;}
+.gcard{background:var(--bg2);border:1px solid var(--border);border-radius:15px;padding:20px 22px;cursor:pointer;transition:all 0.18s;position:relative;overflow:hidden;}
 .gcard:hover{border-color:var(--border2);transform:translateY(-2px);background:var(--bg3);}
 .gcard-bar{position:absolute;top:0;left:0;right:0;height:3px;border-radius:15px 15px 0 0;}
-.gcard-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:12px;}
-.gcard-icon{font-size:26px;line-height:1;}
+.gcard-top{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:10px;}
+.gcard-icon{font-size:24px;line-height:1;}
 .gcard-summary-pill{font-size:10px;font-weight:600;padding:3px 8px;border-radius:20px;}
 .pill-good{background:var(--green-bg);color:var(--green);}
 .pill-warn{background:var(--red-bg);color:var(--red);}
 .pill-mixed{background:var(--amber-bg);color:var(--amber);}
-.gcard-name{font-size:17px;font-weight:600;color:var(--text);margin-bottom:14px;}
-.gcard-spend{font-size:26px;font-weight:600;font-family:'DM Mono',monospace;color:var(--text);margin-bottom:4px;}
-.gcard-props{font-size:11px;color:var(--text3);margin-bottom:14px;}
-
-/* INITIATIVE BREAKDOWN ROWS */
-.init-breakdown{border-top:1px solid var(--border);padding-top:12px;display:flex;flex-direction:column;gap:7px;}
+.gcard-name{font-size:16px;font-weight:600;color:var(--text);margin-bottom:10px;}
+.gcard-month-row{display:flex;align-items:baseline;gap:10px;margin-bottom:2px;}
+.gcard-spend{font-size:26px;font-weight:600;font-family:'DM Mono',monospace;color:var(--text);}
+.gcard-trend{font-size:11px;font-weight:600;padding:2px 7px;border-radius:10px;}
+.gcard-trend.up{background:var(--red-bg);color:var(--red);}
+.gcard-trend.down{background:var(--green-bg);color:var(--green);}
+.gcard-trend.flat{background:var(--bg4);color:var(--text3);}
+.gcard-month-label{font-size:11px;color:var(--text3);margin-bottom:12px;}
+.gcard-alltime{font-size:10px;color:var(--text3);margin-bottom:12px;}
+.init-breakdown{border-top:1px solid var(--border);padding-top:11px;display:flex;flex-direction:column;gap:7px;}
 .init-row{display:flex;align-items:center;justify-content:space-between;gap:8px;}
 .init-row-name{font-size:12px;color:var(--text2);flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
-.init-row-right{display:flex;align-items:center;gap:8px;flex-shrink:0;}
-.init-row-spend{font-size:11px;font-family:'DM Mono',monospace;color:var(--text3);}
+.init-row-right{display:flex;align-items:center;gap:7px;flex-shrink:0;}
+.init-row-spend{font-size:11px;font-family:'DM Mono',monospace;color:var(--text2);}
 .init-trend{font-size:10px;font-weight:600;padding:2px 6px;border-radius:10px;white-space:nowrap;}
 .init-trend.up{background:var(--red-bg);color:var(--red);}
 .init-trend.down{background:var(--green-bg);color:var(--green);}
 .init-trend.flat{background:var(--bg4);color:var(--text3);}
-
-/* GROUP VIEW */
 .view-header{display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:24px;flex-wrap:wrap;gap:14px;}
 .view-header-left h2{font-size:23px;font-weight:600;color:var(--text);}
 .view-header-left p{font-size:13px;color:var(--text2);margin-top:4px;}
@@ -73,8 +72,6 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .itab{background:transparent;border:1px solid var(--border);color:var(--text2);padding:7px 16px;border-radius:20px;font-size:13px;cursor:pointer;transition:all 0.15s;font-family:'DM Sans',sans-serif;}
 .itab:hover{border-color:var(--border2);color:var(--text);}
 .itab.active{background:var(--accent2);border-color:var(--accent2);color:#fff;font-weight:500;}
-
-/* METRICS */
 .metrics-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px;margin-bottom:20px;}
 .mcard{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:15px 17px;}
 .mcard-label{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.07em;color:var(--text3);margin-bottom:7px;}
@@ -82,8 +79,6 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .mcard-sub{font-size:11px;color:var(--text2);margin-top:5px;}
 .mcard-val.red{color:var(--red);}
 .mcard-val.grn{color:var(--green);}
-
-/* AI PANEL */
 .ai-panel{background:var(--bg2);border:1px solid var(--border2);border-radius:15px;padding:22px 24px;margin-bottom:20px;position:relative;overflow:hidden;}
 .ai-panel::after{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--accent2),var(--purple),var(--teal));}
 .ai-top{display:flex;align-items:center;gap:10px;}
@@ -112,8 +107,6 @@ body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;fon
 .ai-loading{display:flex;align-items:center;gap:10px;color:var(--text2);font-size:13px;padding:4px 0;}
 .spinner{width:15px;height:15px;border:2px solid var(--border2);border-top-color:var(--accent);border-radius:50%;animation:spin 0.7s linear infinite;flex-shrink:0;}
 @keyframes spin{to{transform:rotate(360deg)}}
-
-/* TABLE */
 .tsection{background:var(--bg2);border:1px solid var(--border);border-radius:15px;overflow:hidden;}
 .thead-bar{padding:14px 20px;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;}
 .thead-title{font-size:13px;font-weight:500;color:var(--text2);}
@@ -178,26 +171,33 @@ const GROUPS = [
   {id:'other',   name:'Other Expenses',   icon:'📊', color:'#4f9cf9', inits:['Travel_Expenses','Pest Control','Utilities']},
 ];
 
-let aiCache = {};
-let sortState = {col:'total', dir:'desc'};
-let currentView = {gid:null, init:null, market:'all', year:''};
+let aiCache={}, sortState={col:'total',dir:'desc'}, currentView={gid:null,init:null,market:'all',year:''};
 
 const $=id=>document.getElementById(id);
 const fmt=n=>{if(!n)return'-';const a=Math.abs(n);if(a>=1e6)return'$'+(a/1e6).toFixed(1)+'M';if(a>=1000)return'$'+(a/1000).toFixed(1)+'k';return'$'+a.toFixed(0);};
 const fmtF=n=>{if(!n)return'-';return'$'+Math.abs(n).toLocaleString('en-US',{minimumFractionDigits:0,maximumFractionDigits:0});};
-const mlabel=ym=>{const[y,m]=ym.split('-');return new Date(+y,+m-1,1).toLocaleDateString('en-US',{month:'short',year:'2-digit'});};
+const mlabel=ym=>{const[y,m]=ym.split('-');return new Date(+y,+m-1,1).toLocaleDateString('en-US',{month:'long',year:'numeric'});};
+const mlabelShort=ym=>{const[y,m]=ym.split('-');return new Date(+y,+m-1,1).toLocaleDateString('en-US',{month:'short',year:'2-digit'});};
 
-// IMPROVED TREND: compare most recent month vs prior 3-month average
+// Get last month total for an initiative
+function getLastMonthTotal(d) {
+  if(!d||!d.months||!d.months.length) return {total:0, month:''};
+  const lastMonth = d.months[d.months.length-1];
+  const total = d.properties.reduce((s,p)=>s+(d.data[p+'|'+lastMonth]||0),0);
+  return {total, month:lastMonth};
+}
+
+// Trend: last month vs prior 3-month average
 function calcTrend(d) {
-  if(!d||!d.months||d.months.length < 2) return {pct:0, recentMonthTotal:0, priorAvg:0};
+  if(!d||!d.months||d.months.length < 2) return {pct:0};
   const mt={};
   for(const m of d.months) mt[m]=d.properties.reduce((s,p)=>s+(d.data[p+'|'+m]||0),0);
   const lastMonth = d.months[d.months.length-1];
-  const priorMonths = d.months.slice(-4,-1); // 3 months before last
-  const recentMonthTotal = mt[lastMonth]||0;
+  const priorMonths = d.months.slice(-4,-1);
+  const recentTotal = mt[lastMonth]||0;
   const priorAvg = priorMonths.length ? priorMonths.reduce((s,m)=>s+(mt[m]||0),0)/priorMonths.length : 0;
-  const pct = priorAvg ? ((recentMonthTotal - priorAvg) / priorAvg) * 100 : 0;
-  return {pct, recentMonthTotal, priorAvg, lastMonth};
+  const pct = priorAvg ? ((recentTotal - priorAvg) / priorAvg) * 100 : 0;
+  return {pct, recentTotal, priorAvg, lastMonth};
 }
 
 function calcM(d){
@@ -205,10 +205,8 @@ function calcM(d){
   for(const m of d.months){mt[m]=d.properties.reduce((s,p)=>s+(d.data[p+'|'+m]||0),0);grand+=mt[m];}
   const rec=d.months.slice(-3),pri=d.months.slice(-6,-3);
   const recT=rec.reduce((s,m)=>s+(mt[m]||0),0),priT=pri.reduce((s,m)=>s+(mt[m]||0),0);
-  const pct=priT?((recT-priT)/priT)*100:0;
-  // Also compute last-month vs prior-3-avg trend
-  const trend = calcTrend(d);
-  return{grand,mt,avg:grand/(d.months.length||1),recT,priT,pct,rec,trendPct:trend.pct,lastMonth:trend.lastMonth};
+  const trend=calcTrend(d);
+  return{grand,mt,avg:grand/(d.months.length||1),recT,priT,rec,trendPct:trend.pct,lastMonth:trend.lastMonth};
 }
 
 function getD(initName,market,year){
@@ -238,23 +236,39 @@ function setSort(col){
 function renderHome(){
   currentView={gid:null,init:null,market:'all',year:''};
   sortState={col:'total',dir:'desc'};
-  let totalSpend=0,allProps=new Set(),allMarkets=new Set();
-  for(const g of GROUPS)for(const i of g.inits){
-    const d=DATA[i];if(!d)continue;
-    for(const v of Object.values(d.data))totalSpend+=v;
+
+  // Compute top-level last-month stats across all initiatives
+  let lastMonthTotal=0, allProps=new Set(), allMarkets=new Set(), latestMonth='';
+  for(const g of GROUPS) for(const i of g.inits){
+    const d=DATA[i]; if(!d) continue;
+    const lm=getLastMonthTotal(d);
+    lastMonthTotal+=lm.total;
+    if(lm.month>latestMonth) latestMonth=lm.month;
     d.properties.forEach(p=>allProps.add(p));
     (d.markets||[]).forEach(m=>allMarkets.add(m));
   }
   const uniqueMarkets=allMarkets.size||11;
   const uniqueInits=GROUPS.reduce((s,g)=>s+g.inits.filter(i=>DATA[i]).length,0);
 
+  // All-time total for context
+  let allTimeTotal=0;
+  for(const g of GROUPS) for(const i of g.inits){
+    const d=DATA[i]; if(!d) continue;
+    for(const v of Object.values(d.data)) allTimeTotal+=v;
+  }
+
   let h=`<div class="fadein">
     <div class="home-top">
       <h2>Cost Initiative Dashboard</h2>
-      <p>Analyze and track spending across all property initiatives · ${new Date().toLocaleDateString('en-US',{month:'long',year:'numeric'})}</p>
+      <p>Monthly spend overview · ${latestMonth?mlabel(latestMonth):new Date().toLocaleDateString('en-US',{month:'long',year:'numeric'})}</p>
     </div>
     <div class="summary-grid">
-      <div class="sum-card"><div class="sum-label">Total Tracked Spend</div><div class="sum-val">${fmt(totalSpend)}</div><div class="sum-sub">All initiatives · all time</div></div>
+      <div class="sum-card">
+        <div class="sum-label">Last Month Spend</div>
+        <div class="sum-val">${fmt(lastMonthTotal)}</div>
+        <div class="sum-sub">${latestMonth?mlabel(latestMonth):''} · all initiatives</div>
+        <div class="sum-sub2">${fmt(allTimeTotal)} all time</div>
+      </div>
       <div class="sum-card"><div class="sum-label">Properties</div><div class="sum-val">${allProps.size}</div><div class="sum-sub">Across all markets</div></div>
       <div class="sum-card"><div class="sum-label">Initiatives</div><div class="sum-val">${uniqueInits}</div><div class="sum-sub">${GROUPS.length} groups · click to explore</div></div>
       <div class="sum-card"><div class="sum-label">Markets</div><div class="sum-val">${uniqueMarkets}</div><div class="sum-sub">Nationwide portfolio</div></div>
@@ -263,30 +277,33 @@ function renderHome(){
     <div class="groups-grid">`;
 
   for(const g of GROUPS){
-    let groupSpend=0, groupProps=new Set();
-    const initRows = [];
+    let groupLastMonth=0, groupAllTime=0, groupProps=new Set();
+    const initRows=[];
     let improving=0, attention=0;
 
     for(const initName of g.inits){
       const d=DATA[initName]; if(!d) continue;
-      let initSpend=0;
-      for(const v of Object.values(d.data)){groupSpend+=v;initSpend+=v;}
+      const lm=getLastMonthTotal(d);
+      const trend=calcTrend(d);
+      let initAllTime=0;
+      for(const v of Object.values(d.data)){groupAllTime+=v;initAllTime+=v;}
+      groupLastMonth+=lm.total;
       d.properties.forEach(p=>groupProps.add(p));
-
-      const trend = calcTrend(d);
-      const pct = trend.pct;
-      if(pct < -5) improving++;
-      else if(pct > 10) attention++;
-
-      initRows.push({name: initName.replace(/_/g,' '), spend: initSpend, pct, trend});
+      if(trend.pct < -5) improving++;
+      else if(trend.pct > 10) attention++;
+      initRows.push({name:initName.replace(/_/g,' '), lastMonth:lm.total, allTime:initAllTime, pct:trend.pct});
     }
 
-    // Summary pill
-    const total = initRows.length;
-    let pillClass, pillLabel;
-    if(attention === 0){ pillClass='pill-good'; pillLabel=`✓ All ${total} improving`; }
-    else if(attention === total){ pillClass='pill-warn'; pillLabel=`${attention} need attention`; }
-    else { pillClass='pill-mixed'; pillLabel=`${improving} improving · ${attention} flagged`; }
+    const total=initRows.length;
+    let pillClass,pillLabel;
+    if(attention===0){pillClass='pill-good';pillLabel=improving>0?`↓ ${improving} of ${total} improving`:`✓ All stable`;}
+    else if(attention===total){pillClass='pill-warn';pillLabel=`↑ ${attention} need attention`;}
+    else{pillClass='pill-mixed';pillLabel=`${improving} improving · ${attention} flagged`;}
+
+    // Group trend = avg of initiative trends
+    const avgPct = initRows.length ? initRows.reduce((s,r)=>s+r.pct,0)/initRows.length : 0;
+    const gtc = avgPct < -5 ? 'down' : avgPct > 10 ? 'up' : 'flat';
+    const gtl = avgPct < -5 ? `↓ ${Math.abs(avgPct).toFixed(1)}%` : avgPct > 10 ? `↑ ${avgPct.toFixed(1)}%` : '→ Stable';
 
     h+=`<div class="gcard" onclick="renderGroup('${g.id}')">
       <div class="gcard-bar" style="background:${g.color}"></div>
@@ -295,22 +312,25 @@ function renderHome(){
         <div class="gcard-summary-pill ${pillClass}">${pillLabel}</div>
       </div>
       <div class="gcard-name">${g.name}</div>
-      <div class="gcard-spend">${fmt(groupSpend)}</div>
-      <div class="gcard-props">${groupProps.size} properties tracked</div>
+      <div class="gcard-month-row">
+        <div class="gcard-spend">${fmt(groupLastMonth)}</div>
+        <div class="gcard-trend ${gtc}">${gtl}</div>
+      </div>
+      <div class="gcard-month-label">${latestMonth?mlabel(latestMonth):''} · ${groupProps.size} properties</div>
+      <div class="gcard-alltime">All time: ${fmt(groupAllTime)}</div>
       <div class="init-breakdown">`;
 
     for(const row of initRows){
-      const tc = row.pct < -5 ? 'down' : row.pct > 10 ? 'up' : 'flat';
-      const tl = row.pct < -5 ? `↓ ${Math.abs(row.pct).toFixed(1)}%` : row.pct > 10 ? `↑ ${row.pct.toFixed(1)}%` : '→ Stable';
+      const tc=row.pct < -5?'down':row.pct > 10?'up':'flat';
+      const tl=row.pct < -5?`↓ ${Math.abs(row.pct).toFixed(1)}%`:row.pct > 10?`↑ ${row.pct.toFixed(1)}%`:'→ Stable';
       h+=`<div class="init-row">
         <span class="init-row-name">${row.name}</span>
         <div class="init-row-right">
-          <span class="init-row-spend">${fmt(row.spend)}</span>
+          <span class="init-row-spend">${fmt(row.lastMonth)}</span>
           <span class="init-trend ${tc}">${tl}</span>
         </div>
       </div>`;
     }
-
     h+=`</div></div>`;
   }
 
@@ -319,7 +339,7 @@ function renderHome(){
 }
 
 function renderGroup(gid,initName,market,year){
-  const g=GROUPS.find(x=>x.id===gid);if(!g)return;
+  const g=GROUPS.find(x=>x.id===gid); if(!g) return;
   const activeInit=initName||g.inits[0];
   const selMkt=(market===undefined||market===null)?'all':market;
   const selYr=(year===undefined||year===null)?'':year;
@@ -335,17 +355,14 @@ function renderGroup(gid,initName,market,year){
   const p25=allVals[Math.floor(allVals.length*0.25)]||0;
   const mkts=[...new Set(d.markets)].sort();
   const orderedProps=sortedProps(fd.properties,fd.data,fd.months);
-
-  // Use improved trend for metric card
-  const trendPct = m.trendPct;
-  const trendLabel = `${trendPct>=0?'+':''}${trendPct.toFixed(1)}%`;
-  const trendClass = trendPct > 10 ? 'red' : trendPct < -5 ? 'grn' : '';
-  const trendSub = `vs prior 3-mo avg${m.lastMonth?' ('+mlabel(m.lastMonth)+')':''}`;
+  const trendPct=m.trendPct;
+  const trendClass=trendPct>10?'red':trendPct<-5?'grn':'';
+  const lastMonthSpend=m.mt[fd.months[fd.months.length-1]]||0;
 
   let h=`<div class="fadein">
     <div class="breadcrumb"><button class="crumb" onclick="renderHome()">Dashboard</button><span class="sep">›</span><span class="crumb-active">${g.name}</span></div>
     <div class="view-header">
-      <div class="view-header-left"><h2>${g.icon} ${g.name}</h2><p>${g.inits.length} initiatives tracked · ${mkts.slice(0,3).join(', ')}${mkts.length>3?' + more':''}</p></div>
+      <div class="view-header-left"><h2>${g.icon} ${g.name}</h2><p>${g.inits.length} initiatives · ${mkts.slice(0,3).join(', ')}${mkts.length>3?' + more':''}</p></div>
       <div class="filters">
         <select class="fselect" onchange="renderGroup('${gid}','${activeInit}',this.value,'${selYr}')">
           <option value="all" ${selMkt==='all'?'selected':''}>All markets</option>
@@ -359,11 +376,11 @@ function renderGroup(gid,initName,market,year){
     </div>
     <div class="init-tabs">${g.inits.map(i=>`<button class="itab ${i===activeInit?'active':''}" onclick="renderGroup('${gid}','${i}','${selMkt}','${selYr}')">${i.replace(/_/g,' ')}</button>`).join('')}</div>
     <div class="metrics-row">
-      <div class="mcard"><div class="mcard-label">Total Spend</div><div class="mcard-val">${fmt(m.grand)}</div><div class="mcard-sub">${fd.months.length} months</div></div>
+      <div class="mcard"><div class="mcard-label">Last Month</div><div class="mcard-val">${fmt(lastMonthSpend)}</div><div class="mcard-sub">${fd.months.length?mlabel(fd.months[fd.months.length-1]):'-'}</div></div>
+      <div class="mcard"><div class="mcard-label">Monthly Trend</div><div class="mcard-val ${trendClass}">${trendPct>=0?'+':''}${trendPct.toFixed(1)}%</div><div class="mcard-sub">vs prior 3-mo avg</div></div>
+      <div class="mcard"><div class="mcard-label">Monthly Avg</div><div class="mcard-val">${fmt(m.avg)}</div><div class="mcard-sub">all time avg</div></div>
       <div class="mcard"><div class="mcard-label">Properties</div><div class="mcard-val">${fd.properties.length}</div><div class="mcard-sub">tracked</div></div>
-      <div class="mcard"><div class="mcard-label">Monthly Avg</div><div class="mcard-val">${fmt(m.avg)}</div><div class="mcard-sub">per month</div></div>
-      <div class="mcard"><div class="mcard-label">Latest Month Trend</div><div class="mcard-val ${trendClass}">${trendLabel}</div><div class="mcard-sub">${trendSub}</div></div>
-      <div class="mcard"><div class="mcard-label">Last Month</div><div class="mcard-val">${fmt(m.mt[fd.months[fd.months.length-1]]||0)}</div><div class="mcard-sub">${fd.months.length?mlabel(fd.months[fd.months.length-1]):'-'}</div></div>
+      <div class="mcard"><div class="mcard-label">All Time</div><div class="mcard-val" style="font-size:18px">${fmt(m.grand)}</div><div class="mcard-sub">${fd.months.length} months</div></div>
     </div>
     <div class="ai-panel">
       <div class="ai-top">
@@ -388,7 +405,7 @@ function renderGroup(gid,initName,market,year){
     <div class="twrap"><table><thead><tr>
     <th class="sortable ${sortState.col==='name'?'sort-'+sortState.dir:''}" onclick="setSort('name')">Property</th>`;
     let py=null;
-    for(const mo of fd.months){const y=mo.split('-')[0];const ny=y!==py;const is=sortState.col===mo;h+=`<th class="sortable${ny?' ynew':''}${is?' sort-'+sortState.dir:''}" onclick="setSort('${mo}')">${ny?y+' ':''}${mlabel(mo)}</th>`;py=y;}
+    for(const mo of fd.months){const y=mo.split('-')[0];const ny=y!==py;const is=sortState.col===mo;h+=`<th class="sortable${ny?' ynew':''}${is?' sort-'+sortState.dir:''}" onclick="setSort('${mo}')">${ny?y+' ':''}${mlabelShort(mo)}</th>`;py=y;}
     h+=`<th class="sortable ${sortState.col==='total'?'sort-'+sortState.dir:''}" onclick="setSort('total')">Total</th></tr></thead><tbody>`;
     for(const prop of orderedProps){
       const rt=fd.months.reduce((s,mo)=>s+(fd.data[prop+'|'+mo]||0),0);
@@ -421,17 +438,19 @@ async function runAI(gid,initName,selMkt,selYr){
   const pt={};
   for(const p of fd.properties)pt[p]=fd.months.reduce((s,mo)=>s+(fd.data[p+'|'+mo]||0),0);
   const sorted=Object.entries(pt).sort((a,b)=>b[1]-a[1]);
-  const trendStr=m.rec.map(mo=>mlabel(mo)+': '+fmtF(m.mt[mo]||0)).join(', ');
+  const lastMonthSpend=m.mt[fd.months[fd.months.length-1]]||0;
+  const trendStr=m.rec.map(mo=>mlabelShort(mo)+': '+fmtF(m.mt[mo]||0)).join(', ');
   const prompt=`You are a financial analyst for Techvestor, a short-term rental property management company. Analyze the "${initName.replace(/_/g,' ')}" cost initiative.
 
 Summary:
-- Total spend: ${fmtF(m.grand)} over ${fd.months.length} months
-- Properties: ${fd.properties.length}${selMkt!=='all'?' in '+selMkt:' across all markets'}
+- Last month spend: ${fmtF(lastMonthSpend)} (${fd.months.length?mlabel(fd.months[fd.months.length-1]):''})
+- Monthly trend: ${m.trendPct>=0?'+':''}${m.trendPct.toFixed(1)}% vs prior 3-month average
+- All time total: ${fmtF(m.grand)} over ${fd.months.length} months
 - Monthly avg: ${fmtF(m.avg)}
-- Latest month vs prior 3-month avg: ${m.trendPct>=0?'+':''}${m.trendPct.toFixed(1)}% (${m.lastMonth?mlabel(m.lastMonth):''})
+- Properties: ${fd.properties.length}${selMkt!=='all'?' in '+selMkt:' across all markets'}
 - Highest cost properties: ${sorted.slice(0,3).map(([p,v])=>p+' ('+fmtF(v)+')').join(', ')}
 - Lowest cost properties: ${sorted.slice(-3).map(([p,v])=>p+' ('+fmtF(v)+')').join(', ')}
-- Recent trend: ${trendStr}
+- Recent months: ${trendStr}
 
 Provide 3 sharp specific insights for the ops team. Use real $ and % from the data. Be direct and actionable.
 Return ONLY valid JSON: {"insights":[{"type":"good","text":"..."},{"type":"warn","text":"..."},{"type":"info","text":"..."}]}`;
@@ -439,8 +458,8 @@ Return ONLY valid JSON: {"insights":[{"type":"good","text":"..."},{"type":"warn"
   try{
     const r=await fetch(PROXY_URL+'/api/analyze',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt})});
     if(!r.ok)throw new Error('Server returned '+r.status);
-    const data=await r.json();
-    const text=data.content?.[0]?.text||'';
+    const d=await r.json();
+    const text=d.content?.[0]?.text||'';
     const parsed=JSON.parse(text.replace(/```json|```/g,'').trim());
     aiCache[key]={insights:parsed.insights};
   }catch(e){
