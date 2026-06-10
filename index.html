@@ -378,12 +378,12 @@ function calcForProps(initKey, props, yr){
 }
 
 // ── MARKET CARDS ─────────────────────────────────────────────────
-function buildMarketCards(initKey, yr, activeMkt){
+function buildMarketCards(initKey, yr, activeMkt, groupInits){
   const d=D[initKey];if(!d)return'';
   // Get markets available after fund filter
   const baseProps=fprops(initKey);
   const mkts=[...new Set(baseProps.map(p=>PI[p]?.market||'').filter(Boolean))].sort();
-  if(mkts.length<=1)return''; // only 1 market → no need for cards
+  if(mkts.length===0)return''; // no markets → hide
 
   let h='<div class="mkt-row"><div class="mkt-row-label">Market Breakdown — click to drill down</div><div class="mkt-cards">';
 
@@ -579,7 +579,7 @@ function renderGroup(gid, initKey, yr, activeMkt){
       <div class="mc"><div class="mc-lbl">Monthly Trend</div><div class="mc-val ${tc}">${c.trendPct>=0?'+':''}${c.trendPct.toFixed(1)}%</div><div class="mc-sub">vs prior 3-mo avg</div></div>
       <div class="mc"><div class="mc-lbl">Properties</div><div class="mc-val">${dispProps.length}</div><div class="mc-sub">${am||'All markets'}</div></div>
     </div>
-    ${buildMarketCards(ak,sy,am)}
+    ${buildMarketCards(ak,sy,am,g.inits)}
     ${c.perTurn?'<div class="cbanner">💡 <span><strong>Cost per checkout (turn)</strong> — each cell = total spend ÷ checkouts for that property/month.</span></div>':''}
     <div class="aipanel">
       <div class="aitop">
